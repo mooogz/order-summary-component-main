@@ -1,0 +1,166 @@
+:root {
+--paleBlue: hsl(225, 100%, 94%);
+--brightBlue: hsl(245, 75%, 52%);
+--veryPaleBlue: hsl(225, 100%, 98%);
+--desaturatedBlue: hsl(224, 23%, 55%);
+--darkBlue: hsl(223, 47%, 23%);
+--buttonHover: hsla(245, 75%, 52%, .8);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url("images/pattern-background-desktop.svg") repeat-x, var(--paleBlue);
+}
+
+/* Card Layout */ 
+
+.order-card {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 28.125rem;
+    text-align: center;
+    border-radius: 15px;
+}
+
+/* Illustration */
+
+.header-img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+/* Text */
+
+.plan-info {
+    background-color: var(--veryPaleBlue);
+    border-radius: 10px;
+    width: 80%;
+    display: flex;
+    padding: 1.5rem 0 1.5rem 1rem;
+    justify-content: space-around;
+}
+
+.annual-price {
+    padding: 0 2rem 0 0;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 1.8rem;
+    padding: 3rem 0 1rem 0;
+    font-weight: 900;
+}
+
+h2 {
+    font-size: 1rem;
+    font-weight: 900;
+}
+
+span {
+    color: var(--desaturatedBlue);
+    align-self: flex-start;
+}
+
+p {
+    padding: 0 0 1rem 0;
+    width: 70%;
+    color: var(--desaturatedBlue);
+    line-height: 1.5;
+}
+
+
+/* Links */
+
+.change-link {
+    color: var(--brightBlue);
+    font-weight: 700;
+    padding: .8rem .8rem 0 2rem;
+    font-size: .9rem;
+    
+}
+
+.cancel-link {
+    color: var(--desaturatedBlue);
+    text-decoration: none;
+    font-weight: 700;
+    margin-bottom: 3rem;
+}
+
+.payment-btn {
+    background: var(--brightBlue);
+    color: white;
+    border: none;
+    padding: .8rem;
+    border-radius: 10px;
+    width: 80%;
+    margin: 2rem 0 2rem 0;
+    font-weight: 700;
+    -webkit-box-shadow: 0 10px 10px hsl(245, 75%, 52%, 0.4);
+    -moz-box-shadow: 0 10px 10px hsl(245, 75%, 52%, 0.4);
+    box-shadow: 0 10px 10px hsl(245, 75%, 52%, 0.4);
+}
+
+.payment-btn:hover {
+    background-color: var(--buttonHover);
+}
+
+a:hover {
+    color: var(--buttonHover);
+}
+
+/* Footer */
+
+footer {
+    position: absolute;
+    bottom: 0;
+}
+
+.attribution { 
+    font-size: 11px; text-align: center; 
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+    font-size: 11px;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 600px) {
+    body {
+        background: url("images/pattern-background-mobile.svg"), var(--paleBlue);
+        background-repeat: no-repeat;
+    }
+    main {
+        max-width: 80%;
+    }
+
+    .annual-price, .change-link {
+        padding: 0;
+        margin: 0;
+    }
+    
+
+    .header-img {
+        width: 100%;
+    }
+
+    footer {
+        display: none;
+    }
+}
